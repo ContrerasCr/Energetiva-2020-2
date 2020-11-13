@@ -66,7 +66,7 @@ def lista_alimentos_nutrientes(recursos):
     return alimentos_y_recursos
 
 
-#Recibe una lista de strings y devuelve los valores en un string concatenado
+# Recibe una lista de strings y devuelve los valores en un string concatenado
 def join_list_nut(lista):
     lista = list(lista)
     lis = lista[:]
@@ -81,5 +81,30 @@ def join_list_nut(lista):
     liss2 = '   '.join(liss)
     liss2 = liss2 + '               '
     return liss2
+
+
+# Consumo de combustible, recibe cantidad de combustible consumido
+def produccion_co2(comb_consumido):
+    co2_producido = comb_consumido*2.65
+    return co2_producido
+
+
+def costo_transporte_x_dia(aguatransportada, kmruta, consumoxlitrocamion, cantidadcamiones,
+                           preciocombustible, litrosnecesarios, costocamion):
+
+    camionesunitariosneces = litrosnecesarios / aguatransportada  # Camiones totales necesarios.
+    distancia_total = camionesunitariosneces * kmruta  # Km totales que tiene que recorrer indiferente de la cant de cam
+    consumo_combustible_tot = distancia_total / consumoxlitrocamion  # Lt de combustible total
+    gasto_arriendo_tot = cantidadcamiones * costocamion
+    vueltas_necesarias_tot = camionesunitariosneces / cantidadcamiones
+
+    consumo_combustible = round(consumo_combustible_tot, 2)
+    vehiculos_necesarios = round(cantidadcamiones, 2)
+    vueltas_necesarias = round(vueltas_necesarias_tot, 2)
+    gasto_combustible = round(consumo_combustible_tot * preciocombustible, 2)
+    gasto_arriendo = round(gasto_arriendo_tot, 2)
+    valores_retorno = [consumo_combustible, vehiculos_necesarios, vueltas_necesarias, gasto_combustible, gasto_arriendo]
+    return valores_retorno
+
 
 # End Document
