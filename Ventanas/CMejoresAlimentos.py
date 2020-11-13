@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 import funciones
-import numpy as np
+
 
 
 class MejAlimentos(Frame):
@@ -13,13 +13,13 @@ class MejAlimentos(Frame):
         self.main_values_nut.set(None)
 
         Label(self, text='Nutrientes').place(x=20, y=300)
-        Label(self, text='Energia').place(x=105, y=280)
-        Label(self, text='Proteinas').place(x=150, y=280)
-        Label(self, text='Carbohidratos').place(x=150, y=280)
-        Label(self, text='Calcio').place(x=220, y=280)
-        Label(self, text='Hierro').place(x=270, y=280)
-        Label(self, text='Vit. A').place(x=330, y=280)
-        Label(self, text='Vit. C').place(x=400, y=280)
+        Label(self, text='Energia').place(x=120, y=280)
+        Label(self, text='Proteinas').place(x=170, y=280)
+        Label(self, text='Carbohi.').place(x=230, y=280)
+        Label(self, text='Calcio').place(x=290, y=280)
+        Label(self, text='Hierro').place(x=350, y=280)
+        Label(self, text='Vit. A').place(x=410, y=280)
+        Label(self, text='Vit. C').place(x=470, y=280)
 
         # Column 0
         x1y1 = ttk.Label(self, text='Energia')

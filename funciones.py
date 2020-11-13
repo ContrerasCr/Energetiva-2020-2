@@ -76,7 +76,7 @@ def join_list_nut(lista):
     lis2 = lis2.split(',')
     liss = []
     for val in lis2:
-        val2 = val.rjust(10)
+        val2 = val.rjust(13)
         liss.append(val2)
     liss2 = '   '.join(liss)
     liss2 = liss2 + '               '

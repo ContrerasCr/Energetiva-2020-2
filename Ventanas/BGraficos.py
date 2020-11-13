@@ -8,3 +8,5 @@ class GraficosDatos(Frame):
     def __init__(self, geom):
         Frame.__init__(self, )
         self.hig, self.wid = geom
+
+    Label

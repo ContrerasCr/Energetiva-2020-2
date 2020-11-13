@@ -25,19 +25,12 @@ class VentanaPrincipal(Frame):
         Label(self, text='Valores Elegidos', font=18).place(x=480, y=30)
         Label(self, text='Dieta', font=12).place(x=480, y=60)
 
-        Label(self, text='Nuez').place(x=480, y=90)
-        Label(self, text='Almendra').place(x=480, y=120)
-        Label(self, text='Palta').place(x=480, y=150)
-        Label(self, text='Papa Cocida').place(x=480, y=180)
+        Label(self, text='Almendras: 200gr').place(x=480, y=90)
+        Label(self, text='Papa Cocida: 250gr').place(x=480, y=120)
+        Label(self, text='Espinaca: 40gr').place(x=480, y=150)
+        Label(self, text='Pimiento Rojo: 40gr').place(x=480, y=180)
 
-        Label(self, text='Pimiento Rojos').place(x=640, y=90)
-        Label(self, text='Pimiento Verde').place(x=640, y=120)
-        Label(self, text='Kiwi').place(x=640, y=150)
-        Label(self, text='Damasco').place(x=640, y=180)
 
-        Label(self, text='Repollo').place(x=800, y=90)
-        Label(self, text='Lechuga').place(x=800, y=120)
-        Label(self, text='Cereza').place(x=800, y=150)
 
         Label(self, text='Transporte', font=12).place(x=480, y=200)
 

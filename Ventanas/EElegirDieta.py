@@ -28,8 +28,11 @@ class ElegirDieta(Frame):
 
         Label(self, text='Mejores alimentos por relacion nutriente / consumo de agua').place(x=20, y=20)
         Label(self, text='Cada 100grx   ').place(x=20, y=40)
-        Radiobutton(self, text='Dieta Adulto Hombre', variable=self.dieta_value, value='HombreAdulto').place(x=600, y=250)
-        Radiobutton(self, text='Dieta Adulto Mujer', variable=self.dieta_value, value='MujerAdulta').place(x=600, y=280)
+        Label(self, text='Dietas   ', font=14).place(x=580, y=240)
+        Radiobutton(self, text='Grupo 1', variable=self.dieta_value, value='Grupo1').place(x=600, y=280)
+        Radiobutton(self, text='Grupo 2', variable=self.dieta_value, value='Grupo2').place(x=600, y=310)
+        Radiobutton(self, text='Grupo 3', variable=self.dieta_value, value='Grupo3').place(x=600, y=340)
+
         Button(self, text='Calcular', command=lambda: self.activador()).place(x=510, y=250)
         Label(self, text='Dieta Recomendada').place(x=20, y=300)
         Label(self, text='Dieta Obtenida').place(x=20, y=330)
@@ -125,13 +128,22 @@ class ElegirDieta(Frame):
         Label(self, text='Repollo').place(x=820, y=180)
         Label(self, text='Coliflor Cocida').place(x=820, y=210)
 
+        Label(self, text='Energia').place(x=120, y=280)
+        Label(self, text='Proteinas').place(x=170, y=280)
+        Label(self, text='Carbohi.').place(x=230, y=280)
+        Label(self, text='Calcio').place(x=290, y=280)
+        Label(self, text='Hierro').place(x=350, y=280)
+        Label(self, text='Vit. A').place(x=410, y=280)
+        Label(self, text='Vit. C').place(x=470, y=280)
+
     def activador(self):
         self.place_values()
         self.place_dieta()
 
     def place_values(self):
         # Dieta por clasificacion demografica
-        dieta = {'HombreAdulto': [2500, 10, 10, 15, 60], 'MujerAdulta': [2500, 10, 15, 15, 60]}
+        dieta = {'Grupo1': [1100, 43.6, 159, 335, 7.7, 0, 14.6], 'Grupo2': [1900, 69, 250, 664, 12, 0.4, 55],
+                 'Grupo3': [2550, 93.6, 325, 993, 15.5, 0.863, 91.4]}
         eleccion_dieta = self.dieta_value.get()
 
         try:
@@ -139,7 +151,7 @@ class ElegirDieta(Frame):
             cadena = []
             for val in dieta_recomendada:
                 val = str(val)
-                val2 = val.rjust(10)
+                val2 = val.rjust(13)
                 cadena.append(val2)
             string = ''.join(cadena)
             Label(self, text=string).place(x=150, y=300)
@@ -201,7 +213,7 @@ class ElegirDieta(Frame):
             for val in dieta_recomendada:
                 val = round(val, 1)
                 val = str(val)
-                val2 = val.rjust(10)
+                val2 = val.rjust(13)
                 cadena.append(val2)
             string = ''.join(cadena)
             Label(self, text=string).place(x=150, y=330)
