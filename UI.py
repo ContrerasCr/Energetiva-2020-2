@@ -1,11 +1,11 @@
 from tkinter import *
 from tkinter import ttk
-from Ventanas.AVentanaMain import VentanaPrincipal
-from Ventanas.BGraficos import GraficosDatos
+
+
 from Ventanas.CMejoresAlimentos import MejAlimentos
 from Ventanas.DTab_all_alimentos import TodosLosAlimentos
 from Ventanas.EElegirDieta import ElegirDieta
-from Ventanas.FCostoAcueducto import CostoAcueducto
+
 from Ventanas.GCostoTransporte import CostoTransporte
 
 
@@ -23,20 +23,14 @@ class App(Tk):
         self.notebook.place(x=0, y=0, width=self.hig, height=self.wid)
 
     def add_tab(self):
-        tab1 = VentanaPrincipal(self.geom)
-        tab2 = GraficosDatos(self.geom)
         tab3 = MejAlimentos(self.geom)
         tab4 = ElegirDieta(self.geom)
         tab5 = TodosLosAlimentos(self.geom)
-        tab6 = CostoAcueducto(self.geom)
         tab7 = CostoTransporte(self.geom)
 
-        self.notebook.add(tab1, text='Main')
-        self.notebook.add(tab2, text='Graficos')
         self.notebook.add(tab3, text='Datos Top Alimentos')
         self.notebook.add(tab4, text='Crear Dieta Recomendada')
         self.notebook.add(tab5, text='Crear Dieta')
-        self.notebook.add(tab6, text='Costos Acueducto')
         self.notebook.add(tab7, text='Costos Transporte')
 
 
